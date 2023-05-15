@@ -10,7 +10,7 @@ class Cowboy: public Character{
         int _bullet_amount;
 
     public:
-        Cowboy(std::string& name,Point &spot);
+        Cowboy(const std::string& name,Point spot);
         ~Cowboy(){}
         void shoot(Character* enemy);
         bool hasboolets() const;

@@ -12,7 +12,7 @@ class Character{
     private:
 
     public:
-        Character(std::string& name,Point& spot,int hitpoints);
+        Character(const std::string& name,Point& spot,int hitpoints);
         bool isAlive() const;
         double distance(Character *other) const;
         void hit(int dmg);
@@ -21,7 +21,7 @@ class Character{
         Point& getLocation() const;
         virtual std::string print() const = 0;
 
-        virtual ~Character(){};
+        virtual ~Character();
 
 };
 

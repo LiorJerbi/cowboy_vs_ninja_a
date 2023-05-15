@@ -18,7 +18,9 @@ double Point::distance(const Point &other) const{
 }
 
 string Point::print() const{
-    cout << "(" << getX() << "," << getY() << ")" << endl;
+    string ans;
+    ans += "(" + to_string(getX()) + "," + to_string(getY()) + ")";
+    return ans;
 }
 
 Point& Point::moveTowards(const Point &src,const Point &dst,double dist){   // need to implement
