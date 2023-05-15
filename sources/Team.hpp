@@ -12,17 +12,19 @@ namespace ariel{
 
     class Team{
 
-        protected:
+        // protected:
+        //     Character *_leader;
+        //     std::vector<Character*> _squad;
+        private:
             Character *_leader;
-            std::vector<Character*> _squad;
-
+            std::vector<Character*> _squad;            
         public:
             Team(Character* leader);
             void add(Character* member);
             virtual void attack(Team* enmy_team);
             int stillAlive() const;
             virtual void print() const;
-            ~Team();
+            virtual ~Team(){}
     };
 
 

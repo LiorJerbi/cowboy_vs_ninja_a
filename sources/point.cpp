@@ -4,7 +4,7 @@
 using namespace ariel;
 using namespace std;
 
-Point::Point(double x, double y):_x(x),_y(y){
+Point::Point(double xval, double yval):_x(xval),_y(yval){
 }
 double Point::getX() const{
     return _x;
@@ -23,6 +23,6 @@ string Point::print() const{
     return ans;
 }
 
-Point& Point::moveTowards(const Point &src,const Point &dst,double dist){   // need to implement
-    return *this;
+Point Point::moveTowards(const Point &src,const Point &dst,double dist){   // need to implement
+    return src;
 }

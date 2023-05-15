@@ -9,14 +9,14 @@ class Point{
         double _x,_y;
 
     public:
-        Point(double x, double y);
+        Point(double xval, double yval);
 
         double getX() const;
         double getY() const;
         double distance(const Point &other) const;
 
         std::string print() const;
-        Point& moveTowards(const Point &src,const Point &dst,double dist);
+        static Point moveTowards(const Point &src,const Point &dst,double dist);
 
 };
 

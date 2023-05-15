@@ -16,10 +16,10 @@ int Team::stillAlive() const{
 void Team::print() const{
     
 }
-Team::~Team(){
-    delete _leader;
-    for (auto member : _squad)
-    {
-        delete member;
-    }
-}
+// Team::~Team(){
+//     // delete _leader;
+//     // for (auto member : _squad)
+//     // {
+//     //     delete member;
+//     // }
+// }

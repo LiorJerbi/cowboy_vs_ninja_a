@@ -7,7 +7,7 @@ namespace ariel{
 class YoungNinja: public Ninja{
     public:
         YoungNinja(const std::string &name,Point spot);
-        void move(Character *enemy);
+        void move(Character *enemy) override;
 };
 
 }

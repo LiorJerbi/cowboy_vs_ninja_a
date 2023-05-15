@@ -11,12 +11,11 @@ class Cowboy: public Character{
 
     public:
         Cowboy(const std::string& name,Point spot);
-        ~Cowboy(){}
         void shoot(Character* enemy);
         bool hasboolets() const;
         void reload();
         int getBullAmount() const;
-        std::string print() const;
+        std::string print() const override;
 };
 
 }
