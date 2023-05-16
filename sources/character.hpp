@@ -14,7 +14,9 @@ class Character{
         int _hitpoints;
         std::string _name;
     public:
-        Character(const std::string& name,Point spot,int hitpoints);
+        Character(const std::string &name,Point spot,int hitpoints);
+        Character(const Character &other);
+        Character& operator=(const Character &other);
         bool isAlive() const;
         double distance(Character *other) const;
         void hit(int dmg);
@@ -22,8 +24,10 @@ class Character{
         std::string getName() const;
         Point getLocation() const;
         virtual std::string print() const = 0;
+        Character(Character&& other) = delete;
+        Character& operator=(Character&& other) = delete;
 
-        virtual ~Character(){}
+        virtual ~Character();
 
 };
 

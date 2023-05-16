@@ -20,11 +20,15 @@ namespace ariel{
             std::vector<Character*> _squad;            
         public:
             Team(Character* leader);
+            Team(const Team& other);
+            Team& operator=(const Team& other);
             void add(Character* member);
             virtual void attack(Team* enmy_team);
             int stillAlive() const;
             virtual void print() const;
-            virtual ~Team(){}
+            virtual ~Team();
+            Team(Team&& other) = delete;
+            Team& operator=(Team&& other) = delete;
     };
 
 

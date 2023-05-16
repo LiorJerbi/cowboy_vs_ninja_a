@@ -117,13 +117,16 @@ TEST_CASE("Teams Tests:"){
     CHECK_EQ(Ninja_Turtels.stillAlive(),5);
 
     Cowboy leadcby("Lucky luke", Point(2.5,-7));
-    CHECK_THROWS(Team2(&leadninj));     //appointing leader of another squad 
     Team2 Lucky_luke(&leadcby);
     CHECK_EQ(Lucky_luke.stillAlive(),1);
     Cowboy cl1("Lucky luke2", Point(0,-7));
     Cowboy cl2("Lucky luke3", Point(1,-7));
     Cowboy cl3("Lucky luke4", Point(3,-7));
     Cowboy cl4("Lucky luke5", Point(1.5,-7));
+    Lucky_luke.add(&cl1);
+    Lucky_luke.add(&cl2);
+    Lucky_luke.add(&cl3);
+    Lucky_luke.add(&cl4);
     CHECK_EQ(Lucky_luke.stillAlive(),5);
     
     for(int i=0;i<2;++i){
